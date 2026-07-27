@@ -1,9 +1,21 @@
 import { useState } from 'react';
 
-function Square({color}) {
-const [value, setValue] = useState(null);
+var checkpieces =  [
+  ['','n','','b','','b','','b'],
+  ['','b','','b','','b','','b'],
+  ['','b','','b','','b','','b'],
+  ['','b','','b','','b','','b'],
+  ['','b','','b','','b','','b'],
+  ['','b','','b','','b','','b'],
+  ['','b','','b','','b','','b'],
+  ['','b','','b','','a','','d'],
+  /*fix starting position now*/
+  ]
+
+function Square({color,value}) {
+
   function handleClick(){
-    setValue('X')
+ //   setValue('X')
   }
   return (
   <button 
@@ -17,12 +29,13 @@ const [value, setValue] = useState(null);
 
 
 export default function Board() {
+  const [squares, setSquare] = useState(checkpieces);
   return (
     <>
    
       <div className= "board-row">
-      <Square  color = "square"/>
-      <Square  color = "squareB"/>
+      <Square value={squares[0][0]}  color = "square"/>
+      <Square  value={squares[0][1]} color="squareB"/>
       <Square  color = "square"/>
       <Square  color = "squareB"/>
       <Square  color = "square"/>
@@ -124,5 +137,7 @@ export default function Board() {
       
       </div>
     </>
+
+
   );
 }
