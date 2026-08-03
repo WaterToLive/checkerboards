@@ -15,7 +15,14 @@ var checkpieces =  [
 function Square({color,value}) {
 
   function handleClick(){
- //   setValue('X')
+
+ if (value == "") {
+  console.log("empty space!!!")
+ }
+ if (value == "c"){
+  console.log("PIIEECCEEEE")
+  console.log(value)
+ } 
   }
   return (
   <button 
