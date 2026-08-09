@@ -55,6 +55,7 @@ body {
   font-family: sans-serif;
   margin: 20px;
   padding: 0;
+  color:#0a15da;
 }
 
 .squareB {
@@ -102,4 +103,8 @@ body {
 
 .game-info {
   margin-left: 20px;
+}
+
+.hue {
+  color:#0a15da;
 }

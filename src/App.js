@@ -33,7 +33,7 @@ function Square({color,value}) {
   </button>
   );
 }
-
+<div className="hue"></div>
 
 export default function Board() {
   const [squares, setSquare] = useState(checkpieces);
