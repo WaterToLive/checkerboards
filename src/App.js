@@ -11,14 +11,15 @@ var checkpieces =  [
 ["c", "", "c", "", "c", "", "c", ""],
   /*fix starting position now*/
   ]
-
+let fun = "blocked"
 function Square({color,value}) {
 
   function handleClick(){
-
+    
  if (value == "") {
   console.log("empty space!!!")
- }
+  fun = "no space" 
+}
  if (value == "c"){
   console.log("PIIEECCEEEE")
   console.log(value)
