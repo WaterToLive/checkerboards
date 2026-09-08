@@ -12,34 +12,38 @@ var checkpieces =  [
   /*fix starting position now*/
   ]
 let fun = "blocked"
-function Square({color,value}) {
+function Square({color,value,onSquareClick}) {
 
-  function handleClick(){
-    
- if (value == "") {
+  }
+  return (
+  <button 
+    className={color}
+    onClick={onSquareClick}
+  >
+    {value}
+  </button>
+  );
+
+<div className="hue"></div>
+
+export default function Board() {
+  const [squares, setSquare] = useState(checkpieces);
+  return (
+    function handleClick(){
+     if (value == "") {
   console.log("empty space!!!")
   fun = "no space" 
 }
  if (value == "c"){
   console.log("PIIEECCEEEE")
   console.log(value)
- } 
-  }
-  return (
-  <button 
-    className={color}
-    onClick={handleClick}
-  >
-    {value}
-  </button>
-  );
+ 
+} 
+   } 
+  )
 }
-<div className="hue"></div>
 
-export default function Board() {
-  const [squares, setSquare] = useState(checkpieces);
-  return (
-    <>
+ <>
    
       <div className= "board-row">
       <Square value={squares[0][0]}  color = "square"/>
@@ -143,6 +147,5 @@ export default function Board() {
       </div>
     </>
 
-
-  );
 }
+
